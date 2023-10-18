@@ -6,16 +6,20 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
+  function randomVar(param) {
+    return Math.floor(Math.random() * param.length);
+  }
+
   let resultExcuse = () => {
     let who = ["The nerd", "The professor", "My classmates", "Myself"];
     let verb = ["ate", "licked", "pooped", "shot"];
     let what = ["an arrow", "a turd", "a graphics card", "a mouse"];
     let when = ["yesterday", "a month ago", " a while"];
 
-    let whoIndex = Math.floor(Math.random() * who.length);
-    let verbIndex = Math.floor(Math.random() * verb.length);
-    let whatIndex = Math.floor(Math.random() * what.length);
-    let whenIndex = Math.floor(Math.random() * when.length);
+    let whoIndex = randomVar(who);
+    let verbIndex = randomVar(verb);
+    let whatIndex = randomVar(what);
+    let whenIndex = randomVar(when);
 
     return (
       who[whoIndex] +
